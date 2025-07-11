@@ -8,7 +8,7 @@ collections_config:
     name: Pages
     icon: wysiwyg
     disable_url: false
-    include_developer_files: true
+    include_developer_files: false
     description: ''
     _enabled_editors:
     disable_add: false
