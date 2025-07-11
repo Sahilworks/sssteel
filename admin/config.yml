@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: sahilquarecitsolutions/ss-steel
   branch: main
+  auth_scope: repo
+  client_id: Ov23liDXNPk4QMtrEoTe
 
 media_folder: "assets/photos"
 public_folder: "/assets/photos"
