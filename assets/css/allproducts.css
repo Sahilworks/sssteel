@@ -1,0 +1,373 @@
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 773px;
+    overflow: hidden;
+}
+.about-hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(137.23% 68.61% at 100% 50%, rgba(18, 18, 18, 0) 0%, #121212 100%);
+
+}
+.about-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.about-hero-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 129.2px;
+    font-weight: 700;
+    line-height: 107.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.about-hero-breadcrumb {
+    font-family: "Oswald", sans-serif;
+    font-size: 39.2px;
+    font-weight: 700;
+    line-height: 107.2px;
+    text-transform: uppercase;
+}
+.about-hero-breadcrumb .about-red {
+    color: #eb4036;
+}
+@media (max-width: 768px) {
+    .about-hero-title {
+      font-size: 80px;
+      line-height: 80px;
+    }
+    .about-hero-breadcrumb {
+      font-size: 24px;
+    }
+}
+
+
+.about-approach-section {
+    padding: 80px 168px;
+    background: #f8f8f8;
+    text-align: center;
+}
+  
+.about-approach-heading {
+    color: #2988b3;
+    font-family: "Lexend", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 67px;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+  
+.about-approach-heading .about-red {
+    color: #eb4036;
+}
+  
+.about-approach-text {
+    color: #000;
+    font-family: "Lexend", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.5px;
+    max-width: 1500px;
+    margin: 0 auto 40px;
+}
+  
+.about-know-more-btn {
+    display: inline-flex;
+    padding: 16px 32px;
+    background: #2988b3;
+    border: 2px solid #019ee3;
+    color: #fff;
+    font-family: "Lexend", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+  
+.about-know-more-btn:hover {
+    background: #1e7ba8;
+}
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 0px;
+  }
+
+  /* Service Cards Section */
+  .industry-card {
+    border-radius: 25px;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    margin: 18px 0;
+    height: 350px;
+    display: flex;
+    font-family: 'Lexend', sans-serif;
+    width: 440px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+  }
+
+  .industry-card:hover {
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Hide hover-overlay by default */
+  .industry-card .hover-overlay {
+    display: none;
+  }
+
+  /* Show hover-overlay on hover for desktop */
+  .industry-card:hover .hover-overlay {
+    display: block;
+  }
+
+  /* Show hover-overlay when .active is added (for mobile/tablet click) */
+  .industry-card.active .hover-overlay {
+    display: block;
+  }
+
+  /* On mobile/tablet, disable hover effect and use click */
+  @media (max-width: 991px) {
+    .industry-card:hover .hover-overlay {
+      display: none;
+    }
+  }
+
+  .industry-card:hover .default-content {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .industry-card:hover .hover-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+  }
+
+  .industry-card:hover .hover-bg-layer {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(24,36,52,0.67);
+    z-index: 4;
+  }
+
+  .hover-overlay-main {
+    position: relative;
+    z-index: 5;
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  .hover-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .industry-card:hover .industry-icon {
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    margin: 0 8px 0 0;
+    transition: color 0.15s, width 0.21s, height 0.21s;
+  }
+
+  .industry-card:hover .industry-title {
+    color: #fff;
+    font-size: 2.1rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    transition: color 0.15s, font-size 0.21s;
+    letter-spacing: 2px;
+  }
+
+  .hover-long-text {
+    text-align: center;
+    color: #fff;
+    font-size: 1.09rem;
+    font-weight: 600;
+    margin: 24px 0 28px 0;
+  }
+
+  .hover-learn-btn {
+    display: block;
+    background: #fd4136;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    height: 55px;
+    border: none;
+    padding: 15px 40px;
+    margin: 12px auto 0 auto;
+    font-size: 1.23rem;
+    font-family: 'Lexend', sans-serif;
+    transition: background 0.16s;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  .hover-learn-btn:hover {
+    background: #019EE3;
+    cursor: pointer;
+  }
+
+  /* Hover backgrounds for all 6 cards separately */
+  .industry-row .col-lg-4:nth-child(1) .industry-card:hover .hover-overlay {
+    background: url('../photos/oil.svg') center/cover no-repeat;
+  }
+
+  .industry-row .col-lg-4:nth-child(2) .industry-card:hover .hover-overlay {
+    background: url('../photos/ship.svg') center/cover no-repeat;
+  }
+
+  .industry-row .col-lg-4:nth-child(3) .industry-card:hover .hover-overlay {
+    background: url('../photos/refiner.svg') center/cover no-repeat;
+  }
+
+  .industry-row .col-lg-4:nth-child(4) .industry-card:hover .hover-overlay {
+    background: url('../photos/metal.svg') center/cover no-repeat;
+  }
+
+  .industry-row .col-lg-4:nth-child(5) .industry-card:hover .hover-overlay {
+    background: url('../photos/earth.svg') center/cover no-repeat;
+  }
+
+  .industry-row .col-lg-4:nth-child(6) .industry-card:hover .hover-overlay {
+    background: url('../photos/crane.svg') center/cover no-repeat;
+  }
+
+  /* Force Bootstrap grid to behave as row flexbox for industry cards */
+  .industry-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    gap: 30px;
+  }
+
+  .industry-row > .col-lg-4,
+  .industry-row > .col-md-6 {
+    display: block !important;
+  }
+
+  .industry-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+
+  .industry-card .default-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  /* Industry card default content styling */
+  .industry-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--steel-dark);
+    margin: 16px 0 12px 0;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .industry-desc {
+    font-family: 'Lexend', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 280px;
+  }
+
+  /* Industry icon styling for default state (before hover) */
+  .industry-icon-default {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+
+  /* Industry icon styling for hover state */
+  .industry-icon-hover {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+    margin: 0 8px 0 0;
+    filter: brightness(0) invert(1);
+  }
+
+  .industry-card.active .hover-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+  }
+
+  .industry-card.active .hover-bg-layer {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(24,36,52,0.67);
+    z-index: 4;
+  }
+
+  .industry-card.active .default-content {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  @media (max-width: 991.98px) {
+    .industry-title {
+      font-size: 1.7rem;
+    }
+    .industry-card {
+      padding: 26px 6px 28px 6px;
+      min-height: 270px;
+    }
+  }

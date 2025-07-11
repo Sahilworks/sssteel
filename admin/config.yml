@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/photos"
+public_folder: "/assets/photos"
+
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "content/homepage.yml"
+        label: "Homepage Content"
+        name: "homepage_content"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "About Text", name: "about_text", widget: "text" }
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "content/about.yml"
+        label: "About Content"
+        name: "about_content"
+        fields:
+          - { label: "Main Title", name: "main_title", widget: "string" }
+          - { label: "Main Image", name: "main_image", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - file: "content/contact.yml"
+        label: "Contact Content"
+        name: "contact_content"
+        fields:
+          - { label: "Contact Title", name: "contact_title", widget: "string" }
+          - { label: "Contact Info", name: "contact_info", widget: "text" }
+  - name: "products"
+    label: "Products Pages"
+    files:
+      - file: "content/products.yml"
+        label: "All Products Content"
+        name: "products_content"
+        fields:
+          - { label: "Products Title", name: "products_title", widget: "string" }
+          - { label: "Products Description", name: "products_description", widget: "text" } 

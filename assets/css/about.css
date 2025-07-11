@@ -1,0 +1,892 @@
+/* Hero Section */
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .about-hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(137.23% 68.61% at 100% 50%, rgba(18, 18, 18, 0) 0%, #121212 100%);
+
+  }
+  
+  .about-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .about-hero-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 129.2px;
+    font-weight: 700;
+    line-height: 107.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .about-hero-breadcrumb {
+    font-family: "Oswald", sans-serif;
+    font-size: 39.2px;
+    font-weight: 700;
+    line-height: 107.2px;
+    text-transform: uppercase;
+  }
+  
+  .about-hero-breadcrumb .about-red {
+    color: #eb4036;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-hero-title {
+      font-size: 80px;
+      line-height: 80px;
+    }
+  
+    .about-hero-breadcrumb {
+      font-size: 24px;
+    }
+  }
+
+
+  /* second experience section */
+.about-section {
+    padding: 80px 0;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 765px 1fr;
+    gap: 100px;
+    align-items: flex-start;
+}
+
+.about-content {
+    padding-top: 60px;
+}
+
+.section-tag {
+    color: #EB4036;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.main-heading {
+  color: #000;
+  font-family: 'Lexend', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 67.2px;
+  letter-spacing: 0.52px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  max-width: 800px;
+
+}
+
+.description {
+    color: #000;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    margin-bottom: 40px;
+    max-width: 640px;
+}
+
+.why-choose-heading {
+    color: #000;
+    font-family: 'Lexend', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 67.2px;
+    letter-spacing: 1.17px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    background: #000;
+    border-left: 11px solid #EB4036;
+    padding: 1px 0px 0px 20px;
+    width: 310px;
+    height: 32px;
+}
+
+.feature-text {
+    color: #FFF;
+    font-family: 'Lexend', sans-serif;
+    font-size: 19.2px;
+    font-weight: 500;
+    line-height: 30.72px;
+}
+
+.image-container {
+    position: relative;
+    margin-top: 60px;
+}
+
+.blue-triangle {
+    position: absolute;
+    top: -6px;
+    right: -92px;
+    width: 135px;
+    height: 135px;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+.main-image {
+    width: 567px;
+    height: 637px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+.features-list-container{
+  display: flex;
+  gap: 30px;
+}
+.experience-card {
+    bottom: 0px;
+    left: -409px;
+    width: 346px;
+    height: 347px;
+    background: #2988B3;
+    z-index: 3;
+    overflow: hidden;
+}
+.experience-card:hover{
+    background: #EB4036;
+}
+/* --- Experience Card (stats-card1) --- */
+.stats-card1 {
+  right: 0;
+  top: 50%;
+  transform: translateY(0%);
+  background: #2988B3;
+  color: #fff;
+  padding: 36px 32px 32px 32px;
+  height: 300px;
+  box-shadow: 0 4px 24px rgba(41,136,179,0.18);
+  display: flex;
+  width: 300PX;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+  overflow: visible;
+}
+.stats-card1:hover {
+  background: #EB4036;
+}
+
+.stats-card1 img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  opacity: 1;
+  border-radius: 0 16px 16px 0;
+  z-index: 1;
+}
+
+.stats-number1,
+.stats-title111,
+.stats-description1,
+.stats-contact1 {
+  position: relative;
+  z-index: 2;
+}
+
+.stats-number1 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1;
+  text-align: left;
+}
+
+.stats-plus1 {
+  font-size: 48px;
+  margin-left: 8px;
+}
+
+.stats-title111 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.stats-description1 {
+  font-size: 14px;
+  margin: 24px 97px 60px 0px;
+  text-align: left;
+}
+
+.stats-contact1 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- Responsive Tweaks for Experience Card --- */
+@media (max-width: 1200px) {
+  .stats-card1 {
+    right: 0;
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 968px) {
+  .stats-card1 {
+    position: static;
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-card1 {
+    width: 100%;
+    min-width: 0;
+    padding: 24px 12px 24px 12px;
+  }
+}
+.card-worker-image {
+    right: 0;
+    top: 0;
+    width: 270px;
+    height: 347px;
+    object-fit: cover;
+}
+
+.card-content {
+    position: absolute;
+    left: 32px;
+    top: 33px;
+    z-index: 4;
+}
+
+.experience-number {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.number-25 {
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 72px;
+}
+
+.plus-sign {
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-left: 18px;
+}
+
+.experience-title {
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: 115px;
+}
+
+.experience-description {
+    color: #FFF;
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    width: 232px;
+    margin-bottom: 16px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 6.61px;
+    text-decoration: none;
+}
+
+.contact-icon {
+    color: #FFF;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.contact-text {
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .about-section {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .about-container {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-section {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .experience-card {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 20px;
+    }
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 40px 20px;
+    }
+    .stats-title1{
+      text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    }
+    .main-heading {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    .main-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    
+    .experience-card {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .feature-item {
+        width: 100%;
+    }
+}
+
+
+.about-approach-section {
+    padding: 80px 168px;
+    text-align: center;
+  }
+  
+  .about-approach-heading {
+    color: #2988b3;
+    font-family: "Lexend", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 67px;
+    letter-spacing: 2.52px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  .about-approach-heading .about-red {
+    color: #eb4036;
+  }
+  
+  .about-approach-text {
+    color: #000;
+    font-family: "Lexend", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22.5px;
+    max-width: 1500px;
+    margin: 0 auto 40px;
+  }
+  
+  .about-know-more-btn {
+    display: inline-flex;
+    padding: 16px 32px;
+    background: #2988b3;
+    border: 2px solid #019ee3;
+    color: #fff;
+    font-family: "Lexend", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-know-more-btn:hover {
+    background: #1e7ba8;
+  }
+  .about-stats-section {
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 80px;
+  }
+  
+  .about-stat-item {
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #222;
+  }
+  
+  .about-stat-item:last-child {
+    border-right: none;
+  }
+  
+  .about-stat-number {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .about-stat-value {
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 72px;
+  }
+  
+  .about-stat-plus {
+    color: #eb4036;
+    font-family: "Oswald", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 67.2px;
+    margin-left: 8px;
+  }
+  
+  .about-stat-label {
+    color: #2988b3;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    text-transform: uppercase;
+  }
+  
+
+  .sssteel-help-section-xy12 {
+    margin: 0px auto;
+    background: #fff;
+    height: 620px;
+    max-width: 1400px;
+  }
+  
+  .sssteel-help-container-xy12 {
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 100px;
+    align-items: center;
+  }
+  
+  .sssteel-help-images-xy12 {
+    position: relative;
+  }
+  
+  .sssteel-help-main-image-xy12 {
+    width: 691px;
+    height: 446px;
+    object-fit: cover;
+    opacity: 0.91;
+  }
+  
+  .sssteel-process-steps-xy12 {
+    position: absolute;
+    bottom: -240px;
+    left: 62px;
+    right: 0px;
+    background: linear-gradient(270deg, #2988b3 0%, #eb4036 100%);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 300px;
+
+  }
+  
+  .sssteel-process-step-xy12 {
+    color: #fff;
+  }
+  
+  .sssteel-step-icon-xy12 {
+    width: 42px;
+    height: 42px;
+  }
+  
+  .sssteel-step-title-xy12 {
+    font-family: "Oswald", sans-serif;
+    font-size: 19.2px;
+    font-weight: 500;
+    line-height: 24.96px;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+  
+  .sssteel-step-description-xy12 {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+  }
+  
+  .sssteel-help-content-xy12 .sssteel-section-tag-xy12 {
+    color: #eb4036;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3.8px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  
+  .sssteel-help-heading-xy12 {
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 67.2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  
+  .sssteel-help-text-xy12 {
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    margin-bottom: 24px;
+  }
+  
+  .sssteel-contact-us-btn-xy12 {
+    display: inline-flex;
+    padding: 16px 26px;
+    background: #eb4036;
+    border: 1px solid #eb4036;
+    color: #fff;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sssteel-contact-us-btn-xy12:hover {
+    background: #d63529;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .sssteel-help-container-xy12 {
+      grid-template-columns: 1fr;
+      gap: 270px;
+    }
+    .sssteel-help-section-xy12 {
+      padding-left: 50px;
+      height: auto;
+      padding-right: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sssteel-help-section-xy12 {
+      padding: 40px 20px;
+    }
+  }
+
+
+.about-team-section {
+  padding: 80px 168px;
+  background: transparent;
+  text-align: center;
+}
+
+.about-team-heading {
+  color: #2988b3;
+  font-family: "Lexend", sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 67px;
+  letter-spacing: 2.52px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.about-team-description {
+  color: #000;
+  font-family: "Lexend", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22.5px;
+  max-width: 731px;
+  margin: 0 auto 80px;
+}
+
+.about-team-member {
+  display: inline-block;
+  position: relative;
+}
+
+.about-member-image {
+  width: 502px;
+  height: 669px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.about-member-info {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(41, 136, 179, 0) 0%,
+    #2988b3 100%
+  );
+  width: 326px;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 11px;
+}
+
+.about-member-name {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.about-member-title {
+  color: #fff;
+  font-family: "Lexend", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .about-team-section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-team-section {
+    padding: 40px 20px;
+  }
+}
+  
+
+  
+/* === Enhanced Responsive Rules for About Page (AI-generated) === */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .sssteel-help-container-xy12 {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .sssteel-help-main-image-xy12 {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .sssteel-process-steps-xy12 {
+    position: static !important;
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    gap: 16px !important;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-list-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .stats-card1 {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    max-width: 350px !important;
+  }
+  .main-image {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .about-stats-container {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .about-stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid #222;
+  }
+  .about-stat-item:last-child {
+    border-bottom: none;
+  }
+  .about-member-image {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+  }
+  .about-member-info {
+    /* position: static !important; */
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px !important;
+    margin-top: 0px !important;
+  }
+  .about-section,
+  .about-approach-section,
+  .about-stats-section,
+  .about-team-section,
+  .sssteel-help-section-xy12 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+  }
+}
+  
+
+  @media (max-width: 900px) {
+    .sssteel-help-main-image-xy12 {
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: 0 !important;
+      margin-bottom: 20px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sssteel-help-main-image-xy12 {
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      margin-top: 0 !important;
+      margin-bottom: 20px !important;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .about-team-member {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      text-align: center !important;
+    }
+    .about-member-info {
+      width: 300px !important;
+    }
+  }
+  
+
+  
