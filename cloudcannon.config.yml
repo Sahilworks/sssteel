@@ -7,6 +7,10 @@ collections_config:
     path: ''
     name: Pages
     icon: wysiwyg
+    disable_url: false
+    include_developer_files: true
+    description: ''
+    _enabled_editors:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
@@ -14,6 +18,7 @@ collections_config:
     path: content
     name: Content
     icon: wysiwyg
+    disable_url: false
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
