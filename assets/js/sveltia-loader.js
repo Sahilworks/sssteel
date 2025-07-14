@@ -1,5 +1,5 @@
-// Content Loader for Netlify CMS
-class ContentLoader {
+// Sveltia CMS Content Loader
+class SveltiaLoader {
     constructor() {
         this.contentCache = {};
     }
@@ -14,81 +14,44 @@ class ContentLoader {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            const text = await response.text();
-            const content = this.parseFrontMatter(text);
-            this.contentCache[filePath] = content;
-            return content;
+            const data = await response.json();
+            this.contentCache[filePath] = data;
+            return data;
         } catch (error) {
             console.error('Error loading content:', error);
             return null;
         }
     }
 
-    parseFrontMatter(text) {
-        const frontMatterRegex = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/;
-        const match = text.match(frontMatterRegex);
-        
-        if (match) {
-            const frontMatter = match[1];
-            const content = match[2];
-            
-            // Parse YAML front matter
-            const data = {};
-            const lines = frontMatter.split('\n');
-            
-            for (const line of lines) {
-                if (line.trim() && !line.startsWith('#')) {
-                    const colonIndex = line.indexOf(':');
-                    if (colonIndex > 0) {
-                        const key = line.substring(0, colonIndex).trim();
-                        let value = line.substring(colonIndex + 1).trim();
-                        
-                        // Remove quotes if present
-                        if ((value.startsWith('"') && value.endsWith('"')) || 
-                            (value.startsWith("'") && value.endsWith("'"))) {
-                            value = value.slice(1, -1);
-                        }
-                        
-                        data[key] = value;
-                    }
-                }
-            }
-            
-            return { data, content };
-        }
-        
-        return { data: {}, content: text };
-    }
-
     // Load hero content
     async loadHeroContent() {
-        const content = await this.loadContent('content/hero.md');
-        if (content && content.data) {
-            this.updateHeroSection(content.data);
+        const data = await this.loadContent('content/hero.json');
+        if (data) {
+            this.updateHeroSection(data);
         }
     }
 
     // Load services content
     async loadServicesContent() {
-        const content = await this.loadContent('content/services.md');
-        if (content && content.data) {
-            this.updateServicesSection(content.data);
-        }
-    }
-
-    // Load why choose content
-    async loadWhyChooseContent() {
-        const content = await this.loadContent('content/why-choose.md');
-        if (content && content.data) {
-            this.updateWhyChooseSection(content.data);
+        const data = await this.loadContent('content/services.json');
+        if (data) {
+            this.updateServicesSection(data);
         }
     }
 
     // Load about section content
     async loadAboutSectionContent() {
-        const content = await this.loadContent('content/about.md');
-        if (content && content.data) {
-            this.updateAboutSection(content.data);
+        const data = await this.loadContent('content/about.json');
+        if (data) {
+            this.updateAboutSection(data);
+        }
+    }
+
+    // Load contact content
+    async loadContactContent() {
+        const data = await this.loadContent('content/contact.json');
+        if (data) {
+            this.updateContactSection(data);
         }
     }
 
@@ -129,27 +92,6 @@ class ContentLoader {
         }
     }
 
-    // Update why choose section
-    updateWhyChooseSection(data) {
-        const title = document.querySelector('.why-choose-title');
-        const subtitle = document.querySelector('.why-choose-subtitle');
-        const descriptions = document.querySelectorAll('.why-choose-description');
-        const button = document.querySelector('.why-choose-btn');
-
-        if (title && data.title) {
-            title.innerHTML = data.title.replace('SS steel', '<span class="red">SS steel</span>');
-        }
-        if (subtitle && data.subtitle) subtitle.textContent = data.subtitle;
-        if (descriptions[0] && data.description1) descriptions[0].textContent = data.description1;
-        if (descriptions[1] && data.description2) descriptions[1].textContent = data.description2;
-        if (button && data.button_text) {
-            button.textContent = data.button_text;
-            if (data.button_link) {
-                button.href = data.button_link;
-            }
-        }
-    }
-
     // Update about section
     updateAboutSection(data) {
         const subtitle = document.querySelector('.about-subtitle');
@@ -180,24 +122,53 @@ class ContentLoader {
         if (statsIcon && data.stats_icon) statsIcon.src = data.stats_icon;
     }
 
+    // Update contact section
+    updateContactSection(data) {
+        // Update contact information in footer or contact page
+        const companyName = document.querySelector('.company-name');
+        const address = document.querySelector('.company-address');
+        const phone = document.querySelector('.company-phone');
+        const email = document.querySelector('.company-email');
+        const website = document.querySelector('.company-website');
+
+        if (companyName && data.company_name) companyName.textContent = data.company_name;
+        if (address && data.address) address.textContent = data.address;
+        if (phone && data.phone) phone.textContent = data.phone;
+        if (email && data.email) email.textContent = data.email;
+        if (website && data.website) website.href = data.website;
+
+        // Update social media links
+        if (data.social_media) {
+            const facebook = document.querySelector('.social-facebook');
+            const twitter = document.querySelector('.social-twitter');
+            const linkedin = document.querySelector('.social-linkedin');
+            const youtube = document.querySelector('.social-youtube');
+
+            if (facebook && data.social_media.facebook) facebook.href = data.social_media.facebook;
+            if (twitter && data.social_media.twitter) twitter.href = data.social_media.twitter;
+            if (linkedin && data.social_media.linkedin) linkedin.href = data.social_media.linkedin;
+            if (youtube && data.social_media.youtube) youtube.href = data.social_media.youtube;
+        }
+    }
+
     // Load all content for homepage
     async loadHomepageContent() {
         await Promise.all([
             this.loadHeroContent(),
             this.loadServicesContent(),
-            this.loadWhyChooseContent(),
-            this.loadAboutSectionContent()
+            this.loadAboutSectionContent(),
+            this.loadContactContent()
         ]);
     }
 }
 
-// Initialize content loader
-const contentLoader = new ContentLoader();
+// Initialize Sveltia loader
+const sveltiaLoader = new SveltiaLoader();
 
 // Load content when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     // Check if we're on the homepage
     if (window.location.pathname === '/' || window.location.pathname.endsWith('index.html')) {
-        contentLoader.loadHomepageContent();
+        sveltiaLoader.loadHomepageContent();
     }
 }); 

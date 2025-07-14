@@ -1,12 +1,113 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SS Steel - Content Management</title>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Steel - Content Management</title>
+    <script src="https://unpkg.com/sveltia-cms@1.0.0/dist/sveltia-cms.js"></script>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <div id="sveltia-cms"></div>
+    <script>
+        SveltiaCMS.init({
+            config: {
+                backend: {
+                    name: 'git-gateway',
+                    branch: 'main'
+                },
+                local_backend: true,
+                media_folder: 'assets/photos/uploads',
+                public_folder: '/assets/photos/uploads',
+                collections: [
+                    {
+                        name: 'hero',
+                        label: 'Hero Section',
+                        files: [{
+                            name: 'hero',
+                            label: 'Hero Content',
+                            file: 'content/hero.json',
+                            fields: [
+                                { label: 'Subtitle', name: 'subtitle', widget: 'string' },
+                                { label: 'Title', name: 'title', widget: 'string' },
+                                { label: 'Description', name: 'description', widget: 'text' },
+                                { label: 'Button Text', name: 'button_text', widget: 'string' },
+                                { label: 'Button Link', name: 'button_link', widget: 'string' }
+                            ]
+                        }]
+                    },
+                    {
+                        name: 'services',
+                        label: 'Services',
+                        files: [{
+                            name: 'services',
+                            label: 'Services Content',
+                            file: 'content/services.json',
+                            fields: [
+                                {
+                                    label: 'Services',
+                                    name: 'services_list',
+                                    widget: 'list',
+                                    fields: [
+                                        { label: 'Title', name: 'title', widget: 'string' },
+                                        { label: 'Description', name: 'description', widget: 'text' },
+                                        { label: 'Icon', name: 'icon', widget: 'image' },
+                                        { label: 'Link', name: 'link', widget: 'string', required: false }
+                                    ]
+                                }
+                            ]
+                        }]
+                    },
+                    {
+                        name: 'about',
+                        label: 'About Section',
+                        files: [{
+                            name: 'about',
+                            label: 'About Content',
+                            file: 'content/about.json',
+                            fields: [
+                                { label: 'Subtitle', name: 'subtitle', widget: 'string' },
+                                { label: 'Title', name: 'title', widget: 'string' },
+                                { label: 'Description', name: 'description', widget: 'text' },
+                                { label: 'Quote', name: 'quote', widget: 'text' },
+                                { label: 'Button Text', name: 'button_text', widget: 'string' },
+                                { label: 'Button Link', name: 'button_link', widget: 'string' },
+                                { label: 'Stats Number', name: 'stats_number', widget: 'number' },
+                                { label: 'Stats Title', name: 'stats_title', widget: 'string' },
+                                { label: 'Main Image', name: 'main_image', widget: 'image' },
+                                { label: 'Stats Icon', name: 'stats_icon', widget: 'image' }
+                            ]
+                        }]
+                    },
+                    {
+                        name: 'contact',
+                        label: 'Contact Information',
+                        files: [{
+                            name: 'contact',
+                            label: 'Contact Details',
+                            file: 'content/contact.json',
+                            fields: [
+                                { label: 'Company Name', name: 'company_name', widget: 'string' },
+                                { label: 'Address', name: 'address', widget: 'text' },
+                                { label: 'Phone', name: 'phone', widget: 'string' },
+                                { label: 'Email', name: 'email', widget: 'string' },
+                                { label: 'Website', name: 'website', widget: 'string' },
+                                {
+                                    label: 'Social Media',
+                                    name: 'social_media',
+                                    widget: 'object',
+                                    fields: [
+                                        { label: 'Facebook', name: 'facebook', widget: 'string' },
+                                        { label: 'Twitter', name: 'twitter', widget: 'string' },
+                                        { label: 'LinkedIn', name: 'linkedin', widget: 'string' },
+                                        { label: 'YouTube', name: 'youtube', widget: 'string' }
+                                    ]
+                                }
+                            ]
+                        }]
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 </html> 
