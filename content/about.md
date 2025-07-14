@@ -1,0 +1,12 @@
+---
+subtitle: "About Us"
+title: "Welding Craftsmanship Forging Excellence"
+description: "We specialize in providing best quality steel for industries such as shipbuilding, oil and gas, and refineries. With our extensive expertise and commitment to excellence, we offer tailored solutions to meet your specific needs."
+quote: "Maecenas gravida sapien quis mi hendrerit ornare fusce ferment tortor sit amet ipsum laoreet hendrerit ornare."
+button_text: "More About Us"
+button_link: "about.html"
+stats_number: 125
+stats_title: "The Project Complete"
+main_image: "assets/photos/Component 4 (1).svg"
+stats_icon: "assets/photos/125.svg"
+--- 

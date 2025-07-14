@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Steel - Footer Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+</head>
+<body>
+    <div class="footer-container">
+        <!-- Contact Top Bar -->
+        <div class="contact-bar">
+            <div class="contact-content">
+                <!-- Location -->
+                <div class="contact-item">
+                    
+                    <div class="contact-info">
+                        <h4>Location</h4>
+                        <p>84/B Amba Bhavan...</p>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="contact-item">
+                    
+                    <div class="contact-info">
+                        <h4>Email</h4>
+                        <p class="email-link">sssteel_co@hotmail.com</p>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="contact-item">
+                    
+                    <div class="contact-info">
+                        <h4>Call Now</h4>
+                        <p>+91-22-67432181</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <div class="main-footer">
+            <div class="footer-content">
+                <div class="footer-main-grid">
+                    <!-- Newsletter Card -->
+                    <div class="newsletter-card">
+                        <div class="newsletter-title">
+                            <span class="white-text">A newsletter<br></span>
+                            <span class="black-text">subscription<br></span>
+                            <span class="white-text">services is<br>available from us</span>
+                        </div>
+                        <div class="email-input-container">
+                            <input type="email" class="email-input" placeholder="Your Email">
+                        </div>
+                        <button class="subscribe-btn">
+                            <i class="fa-solid fa-circle-right"></i>
+                            Subscribe Now
+                        </button>
+                    </div>
+                    <!-- Company Info -->
+                    <div class="company-section">
+                        <img src="../assets/photos/image.png" alt="SS Steel Logo" class="company-logo">
+                        <p class="company-description">
+                            We are well known for stock of Marine steel plates/Structural Steel & offer value added services round the clock.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-main-grid" style="display: flex; flex-direction: row; gap: 48px 32px; width: 80%; max-width: 1400px; margin: 0 auto; align-items: flex-start;">
+                        <!-- Quick Links -->
+                    <div class="quick-links">
+                        <h3 class="section-title">Quick Links</h3>
+                        <ul class="links-list">
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="products.html">Products</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Our Services -->
+                    <div class="services-section">
+                        <h3 class="section-title">Products</h3>
+                        <ul class="links-list">
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="product-oil-gas.html">Oil & Gas</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="product-shipbuilding.html">Shipbuilding - Navy Grades Steel</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="product-refineries.html">Refineries - Pressure Vessels</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="product-metal-fabrication.html">Metal Fabrication</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="product-earth-moving.html">Earth Moving & Mining</a>
+                            </li>
+                            <li>
+                                <span class="arrow-icon">►</span>
+                                <a href="product-crane-construction.html">Crane Construction and Transport</a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </div> <!-- end of .footer-main-grid -->
+            </div> <!-- end of .footer-content -->
+            
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-legal-section">
+        <div class="footer-legal-content">
+            <span class="footer-legal-copyright">&copy; 2024 SS Steel. All rights reserved.</span>
+        </div>
+    </div>
+
+    <script>
+        // Email validation and form handling
+        document.querySelector('.subscribe-btn').addEventListener('click', function() {
+            const emailInput = document.querySelector('.email-input');
+            const email = emailInput.value.trim();
+            
+            if (email === '') {
+                alert('Please enter your email address');
+                return;
+            }
+            
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // Handle subscription logic here
+            alert('Thank you for subscribing to our newsletter!');
+            emailInput.value = '';
+        });
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Enter key handling for email input
+        document.querySelector('.email-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('.subscribe-btn').click();
+            }
+        });
+
+        // Smooth hover effects
+        document.querySelectorAll('.social-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.1)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

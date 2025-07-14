@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../assets/css/navbar.css">
+    <script src="../assets/js/index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- SS Steel Navbar Component -->
+<nav class="sssteel-navbar">
+    <div class="sssteel-navbar-container">
+        <div class="sssteel-navbar-logo">
+            <a href="index.html"><img src="assets/photos/image.png" alt="SS Steel Logo"></a>
+        </div>
+        <ul class="sssteel-navbar-links">
+            <li><a href="index.html" class="sssteel-navbar-link">Home</a></li>
+            <li><a href="about.html" class="sssteel-navbar-link">About Us</a></li>
+            <li><a href="products.html" class="sssteel-navbar-link">Our Product</a></li>
+            <!-- <li><a href="contact.html" class="sssteel-navbar-link">Contact Us</a></li> -->
+        </ul>
+        <button class="sssteel-navbar-contact-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+        <div class="sssteel-navbar-mobile-menu-btn" id="sssteelNavbarMobileMenuBtn" aria-label="Open navigation" tabindex="0">☰</div>
+    </div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="sssteel-navbar-mobile-overlay" id="sssteelNavbarMobileOverlay" aria-hidden="true">
+        <div class="sssteel-navbar-mobile-content">
+            <button class="sssteel-navbar-mobile-close" id="sssteelNavbarMobileClose" aria-label="Close navigation">&times;</button>
+            <ul class="sssteel-navbar-mobile-list">
+                <li><a href="index.html" class="sssteel-navbar-mobile-link">Home</a></li>
+                <li><a href="about.html" class="sssteel-navbar-mobile-link">About Us</a></li>
+                <li class="sssteel-navbar-mobile-dropdown">
+                    <button class="sssteel-navbar-mobile-link sssteel-navbar-mobile-dropdown-toggle" aria-expanded="false">Our Product <span class="sssteel-navbar-dropdown-arrow">▼</span></button>
+                    <ul class="sssteel-navbar-mobile-dropdown-menu">
+                        <li><a href="product-oil-gas.html" class="sssteel-navbar-mobile-link">Oil & Gas</a></li>
+                        <li><a href="product-shipbuilding.html" class="sssteel-navbar-mobile-link">Shipbuilding - Navy Grades Steel</a></li>
+                        <li><a href="product-refineries.html" class="sssteel-navbar-mobile-link">Refineries - Pressure Vessels</a></li>
+                        <li><a href="product-metal-fabrication.html" class="sssteel-navbar-mobile-link">Metal Fabrication</a></li>
+                        <li><a href="product-earth-moving.html" class="sssteel-navbar-mobile-link">Earth Moving & Mining</a></li>
+                        <li><a href="product-crane-construction.html" class="sssteel-navbar-mobile-link">Crane Construction and Transport</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="sssteel-navbar-mobile-link">Contact Us</a></li>
+            </ul>
+            <button class="sssteel-navbar-contact-btn sssteel-navbar-mobile-contact" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+    </div>
+</nav> 
+
+</body>
+</html>

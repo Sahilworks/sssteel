@@ -1,0 +1,23 @@
+{
+  "name": "ss-steel-website",
+  "version": "1.0.0",
+  "description": "SS Steel - Hard to Find Metal Specialist Website with Netlify CMS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx netlify-cms-proxy-server",
+    "build": "echo 'Static site - no build required'",
+    "start": "npx http-server . -p 3000 -o"
+  },
+  "keywords": [
+    "steel",
+    "metal",
+    "netlify-cms",
+    "static-site"
+  ],
+  "author": "SS Steel",
+  "license": "MIT",
+  "devDependencies": {
+    "netlify-cms-proxy-server": "^1.3.0",
+    "http-server": "^14.1.1"
+  }
+} 

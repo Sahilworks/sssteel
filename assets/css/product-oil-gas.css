@@ -1,0 +1,362 @@
+/* Hero Section */
+.about-hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  }
+.about-hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(137.23% 68.61% at 100% 50%, rgba(18, 18, 18, 0) 0%, #121212 100%);
+
+}
+.about-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+.about-hero-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 129.2px;
+    font-weight: 700;
+    line-height: 107.2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.about-hero-breadcrumb {
+    font-family: "Oswald", sans-serif;
+    font-size: 39.2px;
+    font-weight: 700;
+    line-height: 107.2px;
+    text-transform: uppercase;
+}
+.about-hero-breadcrumb .about-red {
+    color: #eb4036;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero-title {
+      font-size: 60px;
+      line-height: 80px;
+    }
+    .about-hero-breadcrumb {
+      font-size: 24px;
+    }
+}
+
+.ssog-container {
+    max-width: 1325px;
+    margin: 0 auto;
+    padding: 64px 32px;
+}
+
+.ssog-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 67px;
+    letter-spacing: 2.025px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 48px;
+}
+
+.ssog-hero-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.ssog-main-image {
+    width: 100%;
+    height: 457px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.ssog-stats-card {
+    background-color: #2988B3;
+    height: 347px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ssog-worker-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 270px;
+    height: 100%;
+    object-fit: cover;
+    border-bottom-right-radius: 15px;
+}
+
+.ssog-stats-content {
+    position: relative;
+    z-index: 10;
+    padding: 32px;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ssog-number-section {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.ssog-number-25 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 72px;
+}
+
+.ssog-number-plus {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.ssog-experience-text {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31.2px;
+    text-transform: uppercase;
+    max-width: 115px;
+    margin-bottom: 20px;
+}
+
+.ssog-description-text {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25.6px;
+    max-width: 232px;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.ssog-contact-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-top: auto;
+}
+
+.ssog-contact-button:hover {
+    opacity: 0.8;
+}
+
+.ssog-content-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.ssog-main-description p {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.5px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+
+.ssog-main-description p:last-child {
+    margin-bottom: 0;
+}
+
+.ssog-section-title {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27.5px;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.ssog-section-content p {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27.5px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+
+.ssog-section-content p:last-child {
+    margin-bottom: 0;
+}
+
+.ssog-bold {
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ssog-hero-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .ssog-main-image {
+        height: 320px;
+    }
+    
+    .ssog-stats-card {
+        height: 280px;
+    }
+    
+    .ssog-number-25 {
+        font-size: 56px;
+        line-height: 56px;
+    }
+    
+    .ssog-number-plus {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    
+    .ssog-experience-text {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ssog-container {
+        padding: 32px 16px;
+    }
+    
+    .ssog-title {
+        font-size: 32px;
+        line-height: 48px;
+        margin-bottom: 32px;
+    }
+    
+    .ssog-hero-section {
+        margin-bottom: 48px;
+    }
+    
+    .ssog-main-image {
+        height: 250px;
+    }
+    
+    .ssog-stats-card {
+        height: 240px;
+    }
+    
+    .ssog-stats-content {
+        padding: 24px;
+    }
+    
+    .ssog-number-25 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    
+    .ssog-number-plus {
+        font-size: 32px;
+        line-height: 32px;
+    }
+    
+    .ssog-experience-text {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .ssog-description-text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+    
+    .ssog-content-sections {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ssog-container {
+        padding: 24px 12px;
+    }
+    
+    .ssog-title {
+        font-size: 28px;
+        line-height: 42px;
+    }
+    
+    .ssog-main-image {
+        height: 200px;
+    }
+    
+    .ssog-stats-card {
+        height: 200px;
+    }
+    
+    .ssog-worker-image {
+        width: 200px;
+    }
+    
+    .ssog-stats-content {
+        padding: 20px;
+    }
+    
+    .ssog-number-section {
+        margin-bottom: 16px;
+    }
+    
+    .ssog-number-25 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+    
+    .ssog-number-plus {
+        font-size: 24px;
+        line-height: 24px;
+    }
+    
+    .ssog-experience-text {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .ssog-description-text {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+}

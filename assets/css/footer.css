@@ -1,0 +1,486 @@
+.footer-container {
+    width: 100%;
+    background: #000;
+}
+
+/* Contact Top Bar */
+.contact-bar {
+    width: 100%;
+    background: #222;
+    border-top: 1px solid #121212;
+    border-bottom: 1px solid #121212;
+    padding: 26px 0;
+    position: relative;
+    z-index: 0;
+}
+
+.contact-content {
+    max-width: 1905px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end; /* Move to right */
+    align-items: center;
+    gap: 50px; /* Reduced gap */
+    padding: 0 60px 0 20px; /* Add right padding, keep left for balance */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info h4 {
+    color: #A5A5A5;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    font-size: 19.2px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.email-link {
+    text-decoration: underline;
+}
+
+/* Main Footer */
+.main-footer {
+    position: relative;
+    background: #000;
+    padding: 0;
+    min-height: 524px;
+}
+
+.footer-content {
+    max-width: 1905px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+}
+
+/* Newsletter Card - Positioned exactly as in Figma */
+.newsletter-card {
+    position: absolute;
+    left: 313px;
+    top: -112px;
+    width: 356px;
+    height: 504px;
+    background: #EB4036;
+    padding: 48px;
+    z-index: 10;
+}
+
+.newsletter-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 41.6px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.newsletter-title .white-text {
+    color: #FFF;
+}
+
+.newsletter-title .black-text {
+    color: #121212;
+}
+
+.email-input-container {
+    margin-bottom: 20px;
+}
+
+.email-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #121212;
+    padding: 15px 0;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.email-input::placeholder {
+    color: #FFF;
+}
+
+.email-input:focus {
+    outline: none;
+}
+
+.subscribe-btn {
+    width: 100%;
+    background: #121212;
+    color: #FFF;
+    border: none;
+    padding: 21px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.subscribe-btn:hover {
+    background: #333;
+}
+
+/* Company Info Section */
+.company-section {
+    position: absolute;
+    left: 789px;
+    top: 43px;
+    text-align: center;
+    width: 293px;
+}
+
+.company-logo {
+    width: 160px;
+    height: auto;
+    margin: 0 auto 30px;
+}
+
+.company-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 25.6px;
+    color: #FFF;
+    margin-bottom: 50px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.social-link {
+    width: 37px;
+    height: 37px;
+    background: #EB4036;
+    border: 1px solid #EB4036;
+    border-radius: 18.7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+        text-decoration: none;
+        font-family: 'Lexend', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: rgba(235, 64, 54, 0.8);
+}
+
+/* Quick Links */
+.quick-links {
+    position: absolute;
+    left: 1145px;
+    top: 62px;
+    width: 205px;
+}
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 40px;
+}
+
+.links-list {
+    list-style: none;
+}
+
+.links-list li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.links-list a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.links-list a:hover {
+    color: #EB4036;
+}
+
+.arrow-icon {
+    color: #EB4036;
+    font-size: 10px;
+}
+
+/* Our Services */
+.services-section {
+    position: absolute;
+    left: 1370px;
+    top: 63px;
+    width: auto;}
+
+/* Bottom Copyright */
+.copyright-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #222;
+    padding: 33px 0;
+}
+
+.copyright-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.copyright-text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+}
+
+.footer-links a {
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #EB4036;
+}
+
+/* Icons */
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: #FFF;
+}
+
+/* Responsive Design */
+@media (max-width: 1600px) {
+    .contact-content {
+        gap: 220px;
+        padding-right: 50px;
+    }
+    
+    .newsletter-card {
+        left: 50px;
+    }
+    
+    .company-section {
+        left: 450px;
+    }
+    
+    .quick-links {
+        left: 800px;
+    }
+    
+    .services-section {
+        left: 1050px;
+    }
+}
+
+@media (min-width: 765px) and (max-width: 900px) {
+  .contact-content {
+    gap: 90px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+    .footer-content {
+        flex-direction: column;
+        position: static;
+    }
+    
+    .newsletter-card,
+    .company-section,
+    .quick-links,
+    .services-section {
+        position: static;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .newsletter-card {
+        order: 1;
+    }
+    
+    .company-section {
+        order: 2;
+    }
+    
+    .quick-links {
+        order: 3;
+    }
+    
+    .services-section {
+        order: 4;
+    }
+    .contact-content {
+        justify-content: center;
+        padding: 0 20px;
+    }
+    .footer-links-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 64px;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
+    .footer-links-grid .quick-links,
+    .footer-links-grid .services-section {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+@media (max-width: 992px) {
+    .footer-links-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 24px;
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .footer-links-grid {
+        gap: 18px 0;
+    }
+    .footer-links-grid .quick-links,
+    .footer-links-grid .services-section {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+    
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        padding: 0 10px;
+        padding: 30px;
+
+    .contact-item {
+        text-align: center;
+    
+    }
+        font-size: 24px;
+        line-height: 30px;
+        height: auto;
+    
+        margin-bottom: 18px;
+    }
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .social-link {
+        width: 30px;
+        height: 30px;
+        color: white;
+        text-decoration: none;
+        font-family: 'Lexend', sans-serif;
+       
+    }
+}
+
+/* Footer Legal Section */
+.footer-legal-section {
+  width: 100%;
+  background: #111;
+  border-top: 1px solid #222;
+  padding: 18px 0;
+}
+.footer-legal-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  gap: 16px;
+}
+.footer-legal-copyright {
+  color: #bbb;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+.footer-legal-links {
+  display: flex;
+  gap: 32px;
+}
+.footer-legal-link {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  transition: color 0.2s;
+}
+.footer-legal-link:hover {
+  color: #EB4036;
+}
+@media (max-width: 768px) {
+  .footer-legal-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .footer-legal-links {
+    gap: 18px;
+  }
+  .footer-legal-link, .footer-legal-copyright {
+    font-size: 14px;
+  }
+}

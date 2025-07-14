@@ -1,0 +1,172 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "assets/photos/uploads"
+public_folder: "/assets/photos/uploads"
+
+collections:
+  # Hero Section
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - name: "hero"
+        label: "Hero Content"
+        file: "content/hero.md"
+        fields:
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Button Text", name: "button_text", widget: "string"}
+          - {label: "Button Link", name: "button_link", widget: "string"}
+
+  # Services
+  - name: "services"
+    label: "Services"
+    files:
+      - name: "services"
+        label: "Services Content"
+        file: "content/services.md"
+        fields:
+          - label: "Services"
+            name: "services_list"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "image", default: "assets/photos/ser1.png"}
+              - {label: "Link", name: "link", widget: "string", required: false}
+
+  # Why Choose Section
+  - name: "why_choose"
+    label: "Why Choose Section"
+    files:
+      - name: "why_choose"
+        label: "Why Choose Content"
+        file: "content/why-choose.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Description 1", name: "description1", widget: "text"}
+          - {label: "Description 2", name: "description2", widget: "text"}
+          - {label: "Button Text", name: "button_text", widget: "string"}
+          - {label: "Button Link", name: "button_link", widget: "string"}
+
+  # About Section
+  - name: "about"
+    label: "About Section"
+    files:
+      - name: "about"
+        label: "About Content"
+        file: "content/about.md"
+        fields:
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Quote", name: "quote", widget: "text"}
+          - {label: "Button Text", name: "button_text", widget: "string"}
+          - {label: "Button Link", name: "button_link", widget: "string"}
+          - {label: "Stats Number", name: "stats_number", widget: "number"}
+          - {label: "Stats Title", name: "stats_title", widget: "string"}
+          - {label: "Main Image", name: "main_image", widget: "image", default: "assets/photos/Component 4 (1).svg"}
+          - {label: "Stats Icon", name: "stats_icon", widget: "image", default: "assets/photos/125.svg"}
+
+  # About Page
+  - name: "about_page"
+    label: "About Page"
+    files:
+      - name: "about_page"
+        label: "About Page Content"
+        file: "content/about-page.md"
+        fields:
+          - {label: "Hero Title", name: "hero_title", widget: "string"}
+          - {label: "Main Heading", name: "main_heading", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - {label: "Feature Text", name: "text", widget: "string"}
+          - {label: "Experience Years", name: "experience_years", widget: "number"}
+          - {label: "Experience Description", name: "experience_description", widget: "text"}
+          - {label: "Main Image", name: "main_image", widget: "image", default: "assets/photos/about.svg"}
+          - {label: "Approach Title", name: "approach_title", widget: "string"}
+          - {label: "Approach Text", name: "approach_text", widget: "text"}
+          - {label: "Process Title", name: "process_title", widget: "string"}
+          - {label: "Process Description", name: "process_description", widget: "text"}
+          - {label: "Process Image", name: "process_image", widget: "image", default: "assets/photos/howwecan.svg"}
+          - label: "Process Steps"
+            name: "process_steps"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "image"}
+          - label: "Statistics"
+            name: "statistics"
+            widget: "list"
+            fields:
+              - {label: "Value", name: "value", widget: "number"}
+              - {label: "Label", name: "label", widget: "string"}
+          - label: "Team Members"
+            name: "team_members"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+
+  # Contact Information
+  - name: "contact"
+    label: "Contact Information"
+    files:
+      - name: "contact"
+        label: "Contact Details"
+        file: "content/contact.md"
+        fields:
+          - {label: "Company Name", name: "company_name", widget: "string"}
+          - {label: "Address", name: "address", widget: "text"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Website", name: "website", widget: "string"}
+          - label: "Social Media"
+            name: "social_media"
+            widget: "object"
+            fields:
+              - {label: "Facebook", name: "facebook", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string"}
+              - {label: "LinkedIn", name: "linkedin", widget: "string"}
+              - {label: "YouTube", name: "youtube", widget: "string"}
+
+  # Products
+  - name: "products"
+    label: "Products"
+    files:
+      - name: "products"
+        label: "Products List"
+        file: "content/products.md"
+        fields:
+          - label: "Products"
+            name: "products_list"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Icon", name: "icon", widget: "image"}
+              - {label: "Page Link", name: "page_link", widget: "string"}
+              - {label: "Long Description", name: "long_description", widget: "text"}
+
+  # Site Settings
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "site_settings"
+        label: "Site Configuration"
+        file: "content/site-settings.md"
+        fields:
+          - {label: "Site Title", name: "site_title", widget: "string"}
+          - {label: "Site Description", name: "site_description", widget: "text"}
+          - {label: "Logo", name: "logo", widget: "image"}
+          - {label: "Favicon", name: "favicon", widget: "image"} 
